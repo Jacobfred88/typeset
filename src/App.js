@@ -3,27 +3,97 @@ import React, { Component } from 'react';
 class App extends Component {
   render() {
     return (
-      <div>
-        <h1>Hello world</h1>
-        <p>The next shoes to drop seem likely clear: GOP operative Roger Stone has long suspected he'll be indicted. Stone ally Jerome Corsi suggested in a recent YouTube livestream that he may face charges as well. Even Donald Trump's son, Donald Jr., has reportedly discussed with friends the possibility of his own indictment. At the same time, the forced resignation of attorney general Jeff Sessions, and appointment of his chief of staff Matt Whitaker to be the acting attorney general—a decision that is of at least debatable legality—has raised fears that the Trump administration is closing in on firing Mueller himself.</p>
-        <h2>Hello world</h2>
-        <p>The next shoes to drop seem likely clear: GOP operative Roger Stone has long suspected he'll be indicted. Stone ally Jerome Corsi suggested in a recent YouTube livestream that he may face charges as well. Even Donald Trump's son, Donald Jr., has reportedly discussed with friends the possibility of his own indictment. At the same time, the forced resignation of attorney general Jeff Sessions, and appointment of his chief of staff Matt Whitaker to be the acting attorney general—a decision that is of at least debatable legality—has raised fears that the Trump administration is closing in on firing Mueller himself.</p>
-        <h3>Hello world</h3>
-        <p>The next shoes to drop seem likely clear: GOP operative Roger Stone has long suspected he'll be indicted. Stone ally Jerome Corsi suggested in a recent YouTube livestream that he may face charges as well. Even Donald Trump's son, Donald Jr., has reportedly discussed with friends the possibility of his own indictment. At the same time, the forced resignation of attorney general Jeff Sessions, and appointment of his chief of staff Matt Whitaker to be the acting attorney general—a decision that is of at least debatable legality—has raised fears that the Trump administration is closing in on firing Mueller himself.</p>
-        <h4>Hello world</h4>
-        <p>The next shoes to drop seem likely clear: GOP operative Roger Stone has long suspected he'll be indicted. Stone ally Jerome Corsi suggested in a recent YouTube livestream that he may face charges as well. Even Donald Trump's son, Donald Jr., has reportedly discussed with friends the possibility of his own indictment. At the same time, the forced resignation of attorney general Jeff Sessions, and appointment of his chief of staff Matt Whitaker to be the acting attorney general—a decision that is of at least debatable legality—has raised fears that the Trump administration is closing in on firing Mueller himself.</p>
+        <div className="pageMargins">
+          <header className="row">
+            <div className="col-1">
+              <p>Digital design</p>
+            </div>
+            <div className="col-3">
+              <h2>Thomas Williams is an Australian designer with over 12 years experience working across brand identity, publishing and digital products. </h2>
+            </div>
+          </header>
+          <hr />
+          <div class="row">
+            <div className="col-1 offset-1">
+              <p>He has worked and collaborated with industry leaders and global brands including Apple, Patagonia, MINI, Xero, and Sonos. Thomas’ work has been awarded and recognized globally and can be found in publications by Thames &amp; Hudson, Unit Editions, and Gestalten. He has lectured at numerous Universities around Australia and delivered keynotes at conferences including Semi-Permanent, The Design Conference and Creative Mornings.</p>
+            </div>
+            <div className="col-1">
+              <p>In 2011 he founded Made Publishers, a boutique publishing company with a focus on design and culture. Made Publishers has published over 20 editions of Process Journal, MADE and Nourished Journal, all of which can be found in stockists globally, including MoMA (New York) and The Design Museum (London).</p>
+              
+            </div>
+            <div className="col-1">
+              <p>In 2018 Thomas also launched Construct, a new digital product that creates responsive, web-based fee proposals. He spent over two years designing almost every aspect of the product from the ground up.</p>
+              <p>He currently lives and works in Los Angeles, California.</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="image">
+                <img src="https://source.unsplash.com/1600x900/?black" alt=""/>
+              </div>
 
-        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic quia illo optio error doloremque necessitatibus magni quas iusto repellat repudiandae veritatis, cupiditate, libero illum aperiam voluptates deleniti ex corporis expedita.</h1>
-        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic quia illo optio error doloremque necessitatibus magni quas iusto repellat repudiandae veritatis, cupiditate, libero illum aperiam voluptates deleniti ex corporis expedita.</h2>
-        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic quia illo optio error doloremque necessitatibus magni quas iusto repellat repudiandae veritatis, cupiditate, libero illum aperiam voluptates deleniti ex corporis expedita.</h3>
-        <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic quia illo optio error doloremque necessitatibus magni quas iusto repellat repudiandae veritatis, cupiditate, libero illum aperiam voluptates deleniti ex corporis expedita.</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error est cum odit quos. Officia consequatur ratione, pariatur aliquam autem numquam similique blanditiis dignissimos doloremque facere ex nostrum perspiciatis, nesciunt neque.
-        Assumenda quisquam aspernatur, officia quo, maxime at reiciendis consectetur provident sit laboriosam laudantium natus ullam sed optio ratione nulla nostrum sunt hic inventore molestiae! Amet nesciunt molestias tempora consequatur non?
-        At itaque minima eum ullam facilis veniam excepturi commodi doloremque deserunt aspernatur rem similique alias quasi cupiditate, aliquid quo dicta fuga tenetur. Tenetur, architecto. Sint nam eos suscipit adipisci sunt.
-        Illo, rerum ducimus facilis cumque, officiis maxime velit minima suscipit enim nemo asperiores veniam deleniti praesentium sunt, illum numquam recusandae quibusdam architecto quas. Deserunt, iure! Cumque aliquid eum distinctio consequatur.
-        Labore mollitia delectus, non voluptas aut alias exercitationem aliquam voluptatum, ea id quaerat, error corporis laboriosam eos tempora facilis cum minus magni debitis modi esse temporibus sapiente. Eos, consectetur recusandae?
-        At aperiam voluptate voluptatum reiciendis aut natus iure hic quas deserunt? Nihil doloremque ipsa, perspiciatis similique non saepe facere velit numquam molestias placeat, facilis minus in odio. Quisquam, dolores inventore.</p>
-      </div>
+            </div>
+          </div>
+          <div class="row">
+            <div className="col-1 offset-1">
+              <p>He has worked and collaborated with industry leaders and global brands including Apple, Patagonia, MINI, Xero, and Sonos. Thomas’ work has been awarded and recognized globally and can be found in publications by Thames &amp; Hudson, Unit Editions, and Gestalten. He has lectured at numerous Universities around Australia and delivered keynotes at conferences including Semi-Permanent, The Design Conference and Creative Mornings.</p>
+            </div>
+            <div className="col-1">
+              <p>In 2011 he founded Made Publishers, a boutique publishing company with a focus on design and culture. Made Publishers has published over 20 editions of Process Journal, MADE and Nourished Journal, all of which can be found in stockists globally, including MoMA (New York) and The Design Museum (London).</p>
+              
+            </div>
+            <div className="col-1">
+              <p>In 2018 Thomas also launched Construct, a new digital product that creates responsive, web-based fee proposals. He spent over two years designing almost every aspect of the product from the ground up.</p>
+              <p>He currently lives and works in Los Angeles, California.</p>
+            </div>
+          </div>
+          <hr />
+          <header className="row">
+            <div className="col-3">
+              <h2>Thomas Williams is an Australian designer with over 12 years experience working across brand identity, publishing and digital products. </h2>
+            </div>
+            <div className="col-1">
+              <p>Digital design</p>
+            </div>
+          </header>
+          <hr />
+          <div class="row">
+            <div className="col-1">
+              <p>He has worked and collaborated with industry leaders and global brands including Apple, Patagonia, MINI, Xero, and Sonos. Thomas’ work has been awarded and recognized globally and can be found in publications by Thames &amp; Hudson, Unit Editions, and Gestalten. He has lectured at numerous Universities around Australia and delivered keynotes at conferences including Semi-Permanent, The Design Conference and Creative Mornings.</p>
+            </div>
+            <div className="col-1">
+              <p>In 2011 he founded Made Publishers, a boutique publishing company with a focus on design and culture. Made Publishers has published over 20 editions of Process Journal, MADE and Nourished Journal, all of which can be found in stockists globally, including MoMA (New York) and The Design Museum (London).</p>
+              
+            </div>
+            <div className="col-1">
+              <p>In 2018 Thomas also launched Construct, a new digital product that creates responsive, web-based fee proposals. He spent over two years designing almost every aspect of the product from the ground up.</p>
+              <p>He currently lives and works in Los Angeles, California.</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="image">
+                <img src="https://source.unsplash.com/1600x900/?black" alt=""/>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div className="col-1">
+              <p>He has worked and collaborated with industry leaders and global brands including Apple, Patagonia, MINI, Xero, and Sonos. Thomas’ work has been awarded and recognized globally and can be found in publications by Thames &amp; Hudson, Unit Editions, and Gestalten. He has lectured at numerous Universities around Australia and delivered keynotes at conferences including Semi-Permanent, The Design Conference and Creative Mornings.</p>
+            </div>
+            <div className="col-1">
+              <p>In 2011 he founded Made Publishers, a boutique publishing company with a focus on design and culture. Made Publishers has published over 20 editions of Process Journal, MADE and Nourished Journal, all of which can be found in stockists globally, including MoMA (New York) and The Design Museum (London).</p>
+              
+            </div>
+            <div className="col-1">
+              <p>In 2018 Thomas also launched Construct, a new digital product that creates responsive, web-based fee proposals. He spent over two years designing almost every aspect of the product from the ground up.</p>
+              <p>He currently lives and works in Los Angeles, California.</p>
+            </div>
+          </div>
+          <hr />
+        </div>
+        
     );
   }
 }

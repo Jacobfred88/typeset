@@ -25,12 +25,16 @@
       }
     }
   } @else if $left == null or $left == $right {
-    @media only screen and (min-width:rem-calc($breakpoint)) {
-      margin: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading));
+    @each $breakpoint, $value in $type-settings {
+      @media only screen and (min-width:rem-calc($breakpoint)) {
+        margin: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading));
+      }
     }
   } @else {
-    @media only screen and (min-width:rem-calc($breakpoint)) {
-      margin: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading)) rem-calc($left * map-get($value, leading));
+    @each $breakpoint, $value in $type-settings {
+      @media only screen and (min-width:rem-calc($breakpoint)) {
+        margin: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading)) rem-calc($left * map-get($value, leading));
+      }
     }
   }
 }

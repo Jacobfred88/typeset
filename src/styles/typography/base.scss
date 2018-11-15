@@ -6,16 +6,41 @@ body {
   @include font-size(1);
   @include line-height(1);
   font-family: $font-body;
-  padding:0 2rem;
-  background:#111;
-  color:#f1f1f1;
+  font-weight: 400;
+  // background:#111;
+  // color:#f1f1f1;
 
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-}
-
-p {
-  @include margin-bottom(1);
+  }
+  
+  p {
+    @include margin-bottom(0.5);
+  }
+  
+  hr {
+    // @include line-height(1);
+    position: relative;
+    @include margin(1,0,1);
+    box-sizing: content-box;
+    width:100%;
+    border: 0;
+    
+    &:before {
+      position: absolute;
+      top:0;
+      bottom:0;
+      height:1px;
+      margin:auto;
+      width:100%;
+      background:black;
+      content:'';
+  }
+  @each $breakpoint, $value in $type-settings {
+    @media only screen and (min-width:rem-calc($breakpoint)) {
+     height:rem-calc(map-get($value, leading));
+    }
+  }
 }
 
 @each $breakpoint, $scale in $headings {
@@ -29,12 +54,18 @@ p {
   }
 }
 
-h1 {
+h1,h2,h3,h4 {
+  font-family: $font-headings;
+  text-transform: uppercase;
+}
+
+h2 {
   @include margin-bottom(1);
   font-weight:900;
+
+  // font-style:italic;
 }
 
 h2,h3,h4 {
   @include margin-bottom(0.5);
-  font-weight:600;
 }

@@ -2,27 +2,24 @@
    ========================================================================== */
 $base: (
   0: (
-    base-size: 100,
-    line-height: 2,
-    scale: (
-
-    )
-  ),
-  600: (
-    base-size: 150,
-    line-height: 2
-  ),
-  1000: (
-    base-size: 200,
-    line-height: 2
+    base-size: 125,
+    line-height: 1.5, 
   )
+  // 600: (
+  //   base-size: 150,
+  //   line-height: 2
+  // ),
+  // 1000: (
+  //   base-size: 200,
+  //   line-height: 2
+  // )
 );
 
 $headings: (
   0: (
     h1: (
       font-size:3.998,
-      line-height:2
+      line-height:2.5
     ),
     h2: (
       font-size:2.827,
@@ -54,6 +51,6 @@ $type-settings: ();
   $type-settings: map-merge($type-settings, $map);
 }
 
-$font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-headings: null;
+$font-body: ff-meta-web-pro, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-headings:ff-meta-web-pro, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
    

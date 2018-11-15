@@ -1,1 +1,33 @@
 @import "styles/typography/all";
+
+$grid-columns:4;
+$grid-gutter-width:3rem;
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+
+.pageMargins {
+    @include padding(1.5,5.5,0,2.5 );
+}
+
+header {
+    @include padding(0,0,6);
+}
+
+.image {
+    width:100;
+    overflow: hidden;
+    @include margin(2,0 ,2);
+    @each $breakpoint, $value in $type-settings {
+        @media only screen and (min-width:rem-calc($breakpoint)) {
+            height:rem-calc(28 * map-get($value, leading));
+        }
+    }
+
+    img {
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+}
