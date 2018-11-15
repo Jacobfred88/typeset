@@ -1,0 +1,12 @@
+/* Grid
+   ========================================================================== */
+.grid {
+    @each $breakpoint, $value in $type-settings {
+        @media only screen and (min-width:rem-calc($breakpoint)) {
+            background-image: linear-gradient(to bottom, rgba(red, .5) 1px, transparent 1px, transparent #{rem-calc(map-get($value, leading) * 0.5)}, rgba(red, 0.5)  #{rem-calc(map-get($value, leading) * 0.5 + 1)}, transparent  #{rem-calc(map-get($value, leading) * 0.5)}, transparent rem-calc(map-get($value, leading)));
+            background-position: left top;
+            background-repeat: repeat;
+            background-size: 100% rem-calc(map-get($value, leading));
+        }
+    }
+}

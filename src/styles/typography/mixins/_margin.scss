@@ -1,0 +1,36 @@
+// Margin-top
+@mixin margin-top($number) {
+  @each $breakpoint, $value in $type-settings {
+    @media only screen and (min-width:rem-calc($breakpoint)) {
+      margin-top: rem-calc($number * map-get($value, leading));
+    }
+  }
+}
+
+// Margin-bottom
+@mixin margin-bottom($number) {
+  @each $breakpoint, $value in $type-settings {
+    @media only screen and (min-width:rem-calc($breakpoint)) {
+      margin-bottom: rem-calc($number * map-get($value, leading));
+    }
+  }
+}
+
+// Margin
+@mixin margin($top, $right, $bottom:null, $left:null) {
+  @if $left == null and $bottom == null {
+    @each $breakpoint, $value in $type-settings {
+      @media only screen and (min-width:rem-calc($breakpoint)) {
+        margin: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading));
+      }
+    }
+  } @else if $left == null or $left == $right {
+    @media only screen and (min-width:rem-calc($breakpoint)) {
+      margin: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading));
+    }
+  } @else {
+    @media only screen and (min-width:rem-calc($breakpoint)) {
+      margin: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading)) rem-calc($left * map-get($value, leading));
+    }
+  }
+}

@@ -1,0 +1,40 @@
+html {
+  
+}
+
+body {
+  @include font-size(1);
+  @include line-height(1);
+  font-family: $font-body;
+  padding:0 2rem;
+  background:#111;
+  color:#f1f1f1;
+
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  @include margin-bottom(1);
+}
+
+@each $breakpoint, $scale in $headings {
+  @media only screen and (min-width:rem-calc($breakpoint)) {
+    @each $name, $value in $scale {
+      #{$name} {
+        @include font-size(map-get($value, font-size));
+        @include line-height(map-get($value, line-height));
+      }
+    }
+  }
+}
+
+h1 {
+  @include margin-bottom(1);
+  font-weight:900;
+}
+
+h2,h3,h4 {
+  @include margin-bottom(0.5);
+  font-weight:600;
+}

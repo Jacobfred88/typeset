@@ -1,0 +1,30 @@
+// padding
+@mixin padding($top, $right, $bottom:null, $left:null) {
+  @if $left == null and $bottom == null {
+    @each $breakpoint, $value in $type-settings {
+      @media only screen and (min-width:rem-calc($breakpoint)) {
+        padding: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading));
+      }
+    }
+  } @else if $left == null or $left == $right {
+    @each $breakpoint, $value in $type-settings {
+      @media only screen and (min-width:rem-calc($breakpoint)) {
+        padding: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading));
+      }
+    }
+  } @else {
+    @each $breakpoint, $value in $type-settings {
+      @media only screen and (min-width:rem-calc($breakpoint)) {
+        padding: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading)) rem-calc($left * map-get($value, leading));
+      }
+    }
+  }
+}
+
+@mixin padding-equal($number) {
+  @each $breakpoint, $value in $type-settings {
+    @media only screen and (min-width:rem-calc($breakpoint)) {
+      padding: rem-calc($number * map-get($value, leading));
+    }
+  }
+}
