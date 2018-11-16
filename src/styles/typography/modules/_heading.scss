@@ -1,0 +1,27 @@
+@each $breakpoint, $scale in $headings {
+    @media only screen and (min-width:rem-calc($breakpoint)) {
+      @each $name, $value in $scale {
+        #{$name} {
+          @include font-size(map-get($value, font-size));
+          @include line-height(map-get($value, line-height));
+        }
+      }
+    }
+  }
+  
+  h1,h2,h3,h4 {
+    font-family: $font-headings;
+    // text-transform: uppercase;
+  }
+  
+  h2 {
+    @include margin-bottom(1);
+    font-weight:900;
+  
+    // font-style:italic;
+  }
+  
+  h2,h3,h4 {
+    @include margin-bottom(1);
+    
+  }

@@ -1,0 +1,19 @@
+@function type-settings($map) {
+
+  $settings: ();
+  
+  @each $breakpoint, $config in $map {
+    $map: ();
+    
+    $map: map-merge($map, ($breakpoint: (
+      base-size: map-get($config, base-size),
+      line-height: map-get($config, line-height),
+      base: 16 * (map-get($config, base-size) / 100),
+      leading: round((16 * (map-get($config, base-size)) / 100) * map-get($config, line-height))
+    )));
+  
+    $settings: map-merge($settings, $map);
+  }
+
+  @return $settings;
+}

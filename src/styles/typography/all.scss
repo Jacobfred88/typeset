@@ -1,12 +1,18 @@
 @import "functions/rem-calc";
+@import "functions/type-settings";
 
 @import "mixins/font-size";
 @import "mixins/line-height";
 @import "mixins/margin";
 @import "mixins/padding";
+@import "mixins/height";
 
 @import "config";
 
 @import "helpers/grid";
 @import "reset";
 @import "base";
+
+@import "modules/heading";
+@import "modules/hr";
+@import "modules/alignment";

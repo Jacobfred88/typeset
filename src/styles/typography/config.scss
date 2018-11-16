@@ -2,8 +2,8 @@
    ========================================================================== */
 $base: (
   0: (
-    base-size: 125,
-    line-height: 1.5, 
+    base-size: 100,
+    line-height: 1.6, 
   )
   // 600: (
   //   base-size: 150,
@@ -36,20 +36,7 @@ $headings: (
   )
 );
 
-$type-settings: ();
-
-@each $breakpoint, $config in $base {
-  $map: ();
-  
-  $map: map-merge($map, ($breakpoint: (
-    base-size: map-get($config, base-size),
-    line-height: map-get($config, line-height),
-    base: 16 * (map-get($config, base-size) / 100),
-    leading: round((16 * (map-get($config, base-size)) / 100) * map-get($config, line-height))
-  )));
-
-  $type-settings: map-merge($type-settings, $map);
-}
+$type-settings: type-settings($base);
 
 $font-body: ff-meta-web-pro, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-headings:ff-meta-web-pro, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

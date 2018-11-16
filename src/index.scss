@@ -1,7 +1,7 @@
 @import "styles/typography/all";
 
 $grid-columns:4;
-$grid-gutter-width:3rem;
+$grid-gutter-width:2rem;
 @import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
 
@@ -14,14 +14,10 @@ header {
 }
 
 .image {
-    width:100;
+    width:100%;
     overflow: hidden;
-    @include margin(2,0 ,2);
-    @each $breakpoint, $value in $type-settings {
-        @media only screen and (min-width:rem-calc($breakpoint)) {
-            height:rem-calc(28 * map-get($value, leading));
-        }
-    }
+    @include margin(1,0 ,1);
+    @include height(40);
 
     img {
         width:100%;

@@ -4,7 +4,25 @@ class App extends Component {
   render() {
     return (
         <div className="pageMargins">
-          <header className="row">
+          <div className="row">
+            <div className="col-2 flex-align-end">
+              <h4>Cüneyt Sepetçi ( TR )</h4>
+            </div>
+            <div className="col-1 text-r">
+              <p>Istanbul’s traditionally informed clarinet virtuoso Cüneyt Sepetçi is on an intense trip into modern Turkish wedding and party music. After mashing up the place at Roskilde Festival 2014 with the full Dolapdere wedding orchestra, Cüneyt will be back in November 2018 for his first Euro tour</p>
+            </div>
+            <div className="col-1">
+            <p>Lørdag d. 17. november<br />
+
+              Dørene åbner: kl. 20:00<br />
+
+              Koncerten starter: kl. 21:00<br />
+
+              Pris: 160 dkk inkl. gebyr</p>
+            </div>
+          </div>
+
+           <header className="row">
             <div className="col-1">
               <p>Digital design</p>
             </div>
@@ -12,6 +30,7 @@ class App extends Component {
               <h2>Thomas Williams is an Australian designer with over 12 years experience working across brand identity, publishing and digital products. </h2>
             </div>
           </header>
+          {/*
           <hr />
           <div class="row">
             <div className="col-1 offset-1">
@@ -91,7 +110,7 @@ class App extends Component {
               <p>He currently lives and works in Los Angeles, California.</p>
             </div>
           </div>
-          <hr />
+          <hr /> */}
         </div>
         
     );

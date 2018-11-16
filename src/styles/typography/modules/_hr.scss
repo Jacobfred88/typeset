@@ -1,0 +1,19 @@
+hr {
+    position: relative;
+    @include margin(1,0,1);
+    box-sizing: content-box;
+    width:100%;
+    border: 0;
+    
+    &:before {
+      position: absolute;
+      top:0;
+      bottom:0;
+      height:1px;
+      margin:auto;
+      width:100%;
+      background:#e4e6dd;
+      content:'';
+    }
+  @include height();
+  }
