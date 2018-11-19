@@ -27,7 +27,7 @@ class App extends Component {
               <p>Digital design</p>
             </div>
             <div className="col-3">
-              <h2 class="h1-xs">Thomas Williams is an Australian designer with over 12 years experience working across brand identity, publishing and digital products. </h2>
+              <h2>Thomas Williams is an Australian designer with over 12 years experience working across brand identity, publishing and digital products. </h2>
             </div>
           </header>
           {/*

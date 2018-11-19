@@ -1,35 +1,49 @@
 /* Configuration
    ========================================================================== */
-   $base: (
-    0: (
-      base-size: 100,
-      line-height: 1.6, 
-    )
-    // 600: (
-    //   base-size: 150,
-    //   line-height: 2
-    // ),
-    // 1000: (
-    //   base-size: 200,
-    //   line-height: 2
-    // )
-  );
+$base: (
+  0: (
+    base-size: 100,
+    line-height: 1.6, 
+  )
+  // 600: (
+  //   base-size: 150,
+  //   line-height: 2
+  // ),
+  // 1000: (
+  //   base-size: 200,
+  //   line-height: 2
+  // )
+);
   
-  $headings: (
-    0 : (
-      h1: (
+$headings: (
+    h1: (
+      xs: (
         font-size:3.998,
         line-height:2.5
       ),
-      h2: (
+      lg: (
+        font-size:10.998,
+        line-height:2.5
+      )
+    ),
+    h2: (
+      xs: (
         font-size:2.827,
         line-height:2
       ),
-      h3: (
+      lg: (
+        font-size:10.998,
+        line-height:2.5
+      )
+    ),
+    h3: (
+      xs: (
         font-size:1.999,
         line-height:1.5
-      ),
-      h4: (
+      )
+    ),
+    h4: (
+      xs: (
         font-size:1.414,
         line-height:1
       )

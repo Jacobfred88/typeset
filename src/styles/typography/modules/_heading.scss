@@ -1,48 +1,56 @@
-@each $breakpoint, $scale in $headings {
-    @media only screen and (min-width:rem-calc($breakpoint)) {
-      @each $name, $value in $scale {
-        #{$name} {
-          @include font-size(map-get($value, font-size));
-          @include line-height(map-get($value, line-height));
+@each $tag, $heading in $headings {
+  #{$tag} {
+    @each $point, $values in $heading {
+      @include media-breakpoint-up($point) {
+        @include font-size(map-get($values, font-size));
+        @include line-height(map-get($values, line-height));
+      }  
+    }
+  }
+}
+
+@each $tag, $heading in $headings {
+  .#{$tag} {
+    @each $point, $values in $heading {
+      @include media-breakpoint-up($point) {
+        @include font-size(map-get($values, font-size));
+        @include line-height(map-get($values, line-height));
+      }  
+    }
+  }
+}
+
+
+@each $name, $breakpoint in $global-breakpoints {
+  @debug($breakpoint);
+  @include media-breakpoint-up($name) {
+    @each $tag, $heading in $headings {
+      .#{$tag}-#{$name} {
+        @each $point, $values in $heading {
+          @include media-breakpoint-up($point) {
+            @include font-size(map-get($values, font-size));
+            @include line-height(map-get($values, line-height));
+          }  
         }
       }
     }
-  }
-
-
-  // @each $name, $breakpoint in $global-breakpoints {
-  //   @media all and (min-width: #{$breakpoint}) {
-      
-  //     @each $map, $heading in $headings {
-  
-  //       @each $tag, $headingmap in $heading {
-
-  //         @each $size, $headingmapSizes in $headingmap {
-  //           @debug('hello!');
-  //           .#{$tag}-#{$name} {
-  //             @include font-size(map-get($headingmapSizes, font-size));
-  //             @include line-height(map-get($headingmapSizes, line-height));
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-  
-  
-  h1,h2,h3,h4 {
-    font-family: $font-headings;
-    // text-transform: uppercase;
-  }
-  
-  h2 {
-    @include margin-bottom(1);
-    font-weight:900;
-  
-    // font-style:italic;
-  }
-  
-  h2,h3,h4 {
-    @include margin-bottom(1);
     
   }
+}
+  
+h1,h2,h3,h4 {
+  font-family: $font-headings;
+  // text-transform: uppercase;
+}
+
+h2 {
+  @include margin-bottom(1);
+  font-weight:900;
+
+  // font-style:italic;
+}
+
+h2,h3,h4 {
+  @include margin-bottom(1);
+  
+}
