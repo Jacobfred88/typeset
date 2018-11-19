@@ -12,8 +12,8 @@ hr {
       height:1px;
       margin:auto;
       width:100%;
-      background:#e4e6dd;
+      background:#333;
       content:'';
     }
-  @include height();
+    @include height(1);
   }

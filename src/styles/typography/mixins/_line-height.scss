@@ -1,7 +1,7 @@
 // Line-height
 @mixin line-height($number) {
   @each $breakpoint, $value in $type-settings {
-    @media only screen and (min-width:rem-calc($breakpoint)) {
+    @include media-breakpoint-up($breakpoint) {
       line-height:rem-calc($number * map-get($value, leading));
     }
   }
