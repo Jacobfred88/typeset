@@ -1,0 +1,31 @@
+@mixin child-delay-transition($num, $time, $offset) {
+    @for $i from 1 to $num {
+        &:nth-child(#{$i}) { transition-delay: ($i * $time) + $offset; }
+    }   
+}
+
+@mixin child-delay-animation($num, $time, $offset) {
+    @for $i from 1 to $num {
+        &:nth-child(#{$i}) { animation-delay: ($i * $time) + $offset; }
+    }   
+}
+
+
+@mixin child-delay-animation-classes($num, $time, $offset, $name) {
+    @for $i from 1 to $num {
+        .#{$name}-#{$i} { animation-delay: ($i * $time) + $offset; }
+    }   
+    .#{$name}-none {
+        animation-delay: 0s;
+    }
+}
+  
+@mixin child-delay-transition-classes($num, $time, $offset, $name) {
+    @for $i from 1 to $num {
+        .#{$name}-#{$i} { transition-delay: ($i * $time) + $offset; }
+    }
+    
+    .#{$name}-none {
+        transition-delay: 0s;
+    }
+}

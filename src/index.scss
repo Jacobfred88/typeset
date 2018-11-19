@@ -1,7 +1,8 @@
+@import 'styles/settings';
 @import "styles/typography/all";
+@import 'styles/grid/grid';
+@import "styles/animation/reveal";
 
-$grid-columns:4;
-$grid-gutter-width:2rem;
 @import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
 

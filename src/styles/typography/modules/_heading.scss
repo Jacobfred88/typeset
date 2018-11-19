@@ -8,6 +8,27 @@
       }
     }
   }
+
+
+  // @each $name, $breakpoint in $global-breakpoints {
+  //   @media all and (min-width: #{$breakpoint}) {
+      
+  //     @each $map, $heading in $headings {
+  
+  //       @each $tag, $headingmap in $heading {
+
+  //         @each $size, $headingmapSizes in $headingmap {
+  //           @debug('hello!');
+  //           .#{$tag}-#{$name} {
+  //             @include font-size(map-get($headingmapSizes, font-size));
+  //             @include line-height(map-get($headingmapSizes, line-height));
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  
   
   h1,h2,h3,h4 {
     font-family: $font-headings;
