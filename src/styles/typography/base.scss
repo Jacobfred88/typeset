@@ -8,10 +8,7 @@ body {
   @include padding(3,1,3,1 );
   font-family: $font-body;
   font-weight: 400;
-  // color:#333;
-  background:#111;
-  color:white;
-
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

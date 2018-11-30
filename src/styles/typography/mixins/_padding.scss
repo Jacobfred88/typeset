@@ -21,6 +21,24 @@
   }
 }
 
+// Margin-top
+@mixin padding-top($number) {
+  @each $breakpoint, $value in $type-settings {
+    @include media-breakpoint-up($breakpoint) {
+      padding-top: rem-calc($number * map-get($value, leading));
+    }
+  }
+}
+
+// Margin-bottom
+@mixin padding-bottom($number) {
+  @each $breakpoint, $value in $type-settings {
+    @include media-breakpoint-up($breakpoint) {
+      padding-bottom: rem-calc($number * map-get($value, leading));
+    }
+  }
+}
+
 @mixin padding-equal($number) {
   @each $breakpoint, $value in $type-settings {
     @include media-breakpoint-up($breakpoint) {
