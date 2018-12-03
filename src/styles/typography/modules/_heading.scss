@@ -1,14 +1,19 @@
 @each $tag, $heading in $headings {
+  //Tags: 
+  // h{1-6}
   h#{$tag} {
     @include font-size(map-get($heading, font-size));
     @include line-height(map-get($heading, line-height));
   }
+  //CLASSES: 
+  // f{1-6}
   .f#{$tag} {
       @include font-size(map-get($heading, font-size));
       @include line-height(map-get($heading, line-height));
   }
 }
-
+//RESPONSIVE CLASSES: 
+// f{1-6}-{breakpointname}
 @each $name, $breakpoint in $global-breakpoints {
   @each $tag, $heading in $headings {
     @include media-breakpoint-up($name) {
@@ -22,13 +27,12 @@
 
 h1,h2,h3,h4,h5,h6 {
   font-family: $font-headings;
-  // font-weight: 900;
   text-transform: uppercase;
   @include margin-top(2);
   @include margin-bottom(1);
 }
 
-.test {
+.box {
   background:rgba(blue, .75);
   @include padding(3,3);
   @include font-size(4);

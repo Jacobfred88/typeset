@@ -7,7 +7,7 @@ class App extends Component {
           
             <div className="col-4 col-lg-2">
 
-              <h2 className="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate enim eos magnam recusandae adipisci eligendi alias dolor modi dicta. Repellendus dolorem vero natus magnam nam earum dicta ab iusto quo!</h2>
+              <h2 className="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate enim eos magnam recusandae adipisci eligendi alias dolor modi dicta. Repellendus dolorem vero natus magnam nam earum dicta ab iusto quo!</h2>
               <h1>Equilateral Triangle of a Perfect Paragraph</h1>
 
               <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
