@@ -1,17 +1,31 @@
-// Margin-top
 @mixin margin-top($number) {
-  @each $breakpoint, $value in $type-settings {
+  @each $breakpoint, $map in $type-settings {
     @include media-breakpoint-up($breakpoint) {
-      margin-top: rem-calc($number * map-get($value, leading));
+      margin-top: leading-calc($number, $map, $breakpoint);
     }
   }
 }
 
-// Margin-bottom
-@mixin margin-bottom($number) {
-  @each $breakpoint, $value in $type-settings {
+@mixin margin-right($number) {
+  @each $breakpoint, $map in $type-settings {
     @include media-breakpoint-up($breakpoint) {
-      margin-bottom: rem-calc($number * map-get($value, leading));
+      margin-right: leading-calc($number, $map, $breakpoint);
+    }
+  }
+}
+
+@mixin margin-bottom($number) {
+  @each $breakpoint, $map in $type-settings {
+    @include media-breakpoint-up($breakpoint) {
+      margin-bottom: leading-calc($number, $map, $breakpoint);
+    }
+  }
+}
+
+@mixin margin-left($number) {
+  @each $breakpoint, $map in $type-settings {
+    @include media-breakpoint-up($breakpoint) {
+      margin-left: leading-calc($number, $map, $breakpoint);
     }
   }
 }
@@ -19,22 +33,30 @@
 // Margin
 @mixin margin($top, $right, $bottom:null, $left:null) {
   @if $left == null and $bottom == null {
-    @each $breakpoint, $value in $type-settings {
+    @each $breakpoint, $map in $type-settings {
       @include media-breakpoint-up($breakpoint) {
-        margin: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading));
+        margin: leading-calc($top, $map, $breakpoint) leading-calc($right, $map, $breakpoint);
       }
     }
   } @else if $left == null or $left == $right {
-    @each $breakpoint, $value in $type-settings {
+    @each $breakpoint, $map in $type-settings {
       @include media-breakpoint-up($breakpoint) {
-        margin: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading));
+        margin: leading-calc($top, $map, $breakpoint) leading-calc($right, $map, $breakpoint) leading-calc($bottom, $map, $breakpoint);
       }
     }
   } @else {
-    @each $breakpoint, $value in $type-settings {
+    @each $breakpoint, $map in $type-settings {
       @include media-breakpoint-up($breakpoint) {
-        margin: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading)) rem-calc($left * map-get($value, leading));
+        margin: leading-calc($top, $map, $breakpoint) leading-calc($right, $map, $breakpoint) leading-calc($bottom, $map, $breakpoint) leading-calc($left, $map, $breakpoint);
       }
+    }
+  }
+}
+
+@mixin padding-equal($number) {
+  @each $breakpoint, $map in $type-settings {
+    @include media-breakpoint-up($breakpoint) {
+      margin: leading-calc($number, $map, $breakpoint);
     }
   }
 }

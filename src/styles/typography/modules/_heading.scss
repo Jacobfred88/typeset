@@ -1,50 +1,36 @@
 @each $tag, $heading in $headings {
-  #{$tag} {
-    @each $point, $values in $heading {
-      @include media-breakpoint-up($point) {
-        @include font-size(map-get($values, font-size));
-        @include line-height(map-get($values, line-height));
-      }  
-    }
+  h#{$tag} {
+    @include font-size(map-get($heading, font-size));
+    @include line-height(map-get($heading, line-height));
+  }
+  .f#{$tag} {
+      @include font-size(map-get($heading, font-size));
+      @include line-height(map-get($heading, line-height));
   }
 }
-
-@each $tag, $heading in $headings {
-  .#{$tag} {
-    @each $point, $values in $heading {
-      @include media-breakpoint-up($point) {
-        @include font-size(map-get($values, font-size));
-        @include line-height(map-get($values, line-height));
-      }  
-    }
-  }
-}
-
 
 @each $name, $breakpoint in $global-breakpoints {
-  @debug($breakpoint);
-  @include media-breakpoint-up($name) {
-    @each $tag, $heading in $headings {
-      .#{$tag}-#{$name} {
-        @each $point, $values in $heading {
-          @include media-breakpoint-up($point) {
-            @include font-size(map-get($values, font-size));
-            @include line-height(map-get($values, line-height));
-          }  
-        }
+  @each $tag, $heading in $headings {
+    @include media-breakpoint-up($name) {
+      .f#{$tag}-#{$name} {
+          @include font-size(map-get($heading, font-size));
+          @include line-height(map-get($heading, line-height));
       }
     }
-    
   }
 }
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4,h5,h6 {
   font-family: $font-headings;
-  font-weight: 900;
+  // font-weight: 900;
+  text-transform: uppercase;
   @include margin-top(2);
   @include margin-bottom(1);
 }
 
-// p + p {
-//   text-indent: 1.5rem;
-// }
+.test {
+  background:blue;
+  @include padding(3,3);
+  @include font-size(4);
+  @include line-height(2);
+}

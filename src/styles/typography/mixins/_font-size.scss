@@ -1,8 +1,8 @@
 // Font-size
-@mixin font-size($number) {
+@mixin font-size($step) {
   @each $breakpoint, $value in $type-settings {
     @include media-breakpoint-up($breakpoint) {
-      font-size:rem-calc($number * map-get($value, base));
+      font-size:rem-calc(map-get(map-get($scales,$breakpoint), $step),map-get(map-get($scales,$breakpoint), 0));
     }
   }
 }

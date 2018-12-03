@@ -1,6 +1,8 @@
 @import "functions/rem-calc";
+@import "functions/leading-calc";
 @import "functions/type-settings";
 
+@import "mixins/base-size";
 @import "mixins/font-size";
 @import "mixins/line-height";
 @import "mixins/margin";

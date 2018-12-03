@@ -1,0 +1,9 @@
+// Font-size
+@mixin base-size() {
+    @each $breakpoint, $value in $type-settings {
+        @include media-breakpoint-up($breakpoint) {
+            font-size:map-get($value, base) * 1%;
+        }
+    }
+}
+  

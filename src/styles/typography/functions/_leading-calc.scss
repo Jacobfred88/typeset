@@ -1,0 +1,3 @@
+@function leading-calc($number,$map, $breakpoint) {
+    @return rem-calc($number * map-get($map, leading), map-get(map-get($scales,$breakpoint), 0));
+}

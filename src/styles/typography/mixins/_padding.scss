@@ -1,48 +1,62 @@
 // padding
 @mixin padding($top, $right, $bottom:null, $left:null) {
   @if $left == null and $bottom == null {
-    @each $breakpoint, $value in $type-settings {
+    @each $breakpoint, $map in $type-settings {
       @include media-breakpoint-up($breakpoint) {
-        padding: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading));
+        padding: leading-calc($top, $map, $breakpoint) leading-calc($right, $map, $breakpoint);
       }
     }
   } @else if $left == null or $left == $right {
-    @each $breakpoint, $value in $type-settings {
+    @each $breakpoint, $map in $type-settings {
       @include media-breakpoint-up($breakpoint) {
-        padding: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading));
+        padding: leading-calc($top, $map, $breakpoint) leading-calc($right, $map, $breakpoint) leading-calc($bottom, $map, $breakpoint);
       }
     }
   } @else {
-    @each $breakpoint, $value in $type-settings {
+    @each $breakpoint, $map in $type-settings {
       @include media-breakpoint-up($breakpoint) {
-        padding: rem-calc($top * map-get($value, leading)) rem-calc($right * map-get($value, leading)) rem-calc($bottom * map-get($value, leading)) rem-calc($left * map-get($value, leading));
+        padding: leading-calc($top, $map, $breakpoint) leading-calc($right, $map, $breakpoint) leading-calc($bottom, $map, $breakpoint) leading-calc($left, $map, $breakpoint);
       }
-    }
+    } 
   }
 }
 
-// Margin-top
 @mixin padding-top($number) {
-  @each $breakpoint, $value in $type-settings {
+  @each $breakpoint, $map in $type-settings {
     @include media-breakpoint-up($breakpoint) {
-      padding-top: rem-calc($number * map-get($value, leading));
+      padding-top: leading-calc($number, $map, $breakpoint);
     }
   }
 }
 
-// Margin-bottom
-@mixin padding-bottom($number) {
-  @each $breakpoint, $value in $type-settings {
+@mixin padding-right($number) {
+  @each $breakpoint, $map in $type-settings {
     @include media-breakpoint-up($breakpoint) {
-      padding-bottom: rem-calc($number * map-get($value, leading));
+      padding-right: leading-calc($number, $map, $breakpoint);
+    }
+  }
+}
+
+@mixin padding-bottom($number) {
+  @each $breakpoint, $map in $type-settings {
+    @include media-breakpoint-up($breakpoint) {
+      padding-bottom: leading-calc($number, $map, $breakpoint);
+    }
+  }
+}
+
+@mixin padding-left($number) {
+  @each $breakpoint, $map in $type-settings {
+    @include media-breakpoint-up($breakpoint) {
+      padding-left: leading-calc($number, $map, $breakpoint);
     }
   }
 }
 
 @mixin padding-equal($number) {
-  @each $breakpoint, $value in $type-settings {
+  @each $breakpoint, $map in $type-settings {
     @include media-breakpoint-up($breakpoint) {
-      padding: rem-calc($number * map-get($value, leading));
+      padding: leading-calc($bottom, $map, $breakpoint);
     }
   }
 }

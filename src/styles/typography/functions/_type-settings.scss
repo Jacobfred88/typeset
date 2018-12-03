@@ -6,10 +6,9 @@
     $map: ();
     
     $map: map-merge($map, ($breakpoint: (
-      base-size: map-get($config, base-size),
+      base: map-get($config, base-size)/16 * 100,
       line-height: map-get($config, line-height),
-      base: 16 * (map-get($config, base-size) / 100),
-      leading: round((16 * (map-get($config, base-size)) / 100) * map-get($config, line-height))
+      leading: round(map-get($config, base-size)) * map-get($config, line-height)
     )));
   
     $settings: map-merge($settings, $map);
