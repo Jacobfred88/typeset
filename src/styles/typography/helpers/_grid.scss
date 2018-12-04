@@ -7,7 +7,7 @@
             background-image: -o-linear-gradient(top,rgba(red, .8) 0,rgba(255,255,255,0)1px);
             background-image: linear-gradient(to bottom,rgba(red, .8) 0,rgba(255,255,255,0)1px);
             background-repeat: repeat-y;
-            background-size: 100% calc(#{rem-calc(map-get($value, leading), map-get(map-get($scales,$breakpoint), 0))}/2);
+            background-size: 100% leading-calc(0.5,$value,$breakpoint);
         }
     }
 }

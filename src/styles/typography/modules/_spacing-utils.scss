@@ -1,0 +1,103 @@
+//Margin
+
+@for $i from 0 to $spacingClassCount {
+    .mt#{$i} {
+        @include margin-top($i);
+    }
+
+    .mb#{$i} {
+        @include margin-bottom($i);
+    }
+
+    .mr#{$i} {
+        @include margin-right($i);
+    }
+
+    .ml#{$i} {
+        @include margin-left($i);
+    }
+
+    .m#{$i} {
+        @include margin($i,$i,$i,$i);
+    }
+}
+
+@each $name, $breakpoint in $global-breakpoints {
+    @each $tag, $heading in $headings {
+      @include media-breakpoint-up($name) {
+            @for $i from 0 to $spacingClassCount {
+                .mt#{$i}-#{$name} {
+                    @include margin-top($i);
+                }
+
+                .mb#{$i}-#{$name} {
+                    @include margin-bottom($i);
+                }
+
+                .mr#{$i}-#{$name} {
+                    @include margin-right($i);
+                }
+
+                .ml#{$i}-#{$name} {
+                    @include margin-left($i);
+                }
+
+                .m#{$i}-#{$name} {
+                    @include margin($i,$i,$i,$i);
+                }
+            }
+        }
+    }
+}
+
+//Padding
+
+@for $i from 0 to $spacingClassCount {
+    .pt#{$i} {
+        @include padding-top($i);
+    }
+
+    .pb#{$i} {
+        @include padding-bottom($i);
+    }
+
+    .pr#{$i} {
+        @include padding-right($i);
+    }
+
+    .pl#{$i} {
+        @include padding-left($i);
+    }
+
+    .p#{$i} {
+        @include padding($i,$i,$i,$i);
+    }
+}
+
+@each $name, $breakpoint in $global-breakpoints {
+    @each $tag, $heading in $headings {
+      @include media-breakpoint-up($name) {
+            @for $i from 0 to $spacingClassCount {
+                .pt#{$i}-#{$name} {
+                    @include margin-top($i);
+                }
+
+                .pb#{$i}-#{$name} {
+                    @include margin-bottom($i);
+                }
+
+                .pr#{$i}-#{$name} {
+                    @include margin-right($i);
+                }
+
+                .pl#{$i}-#{$name} {
+                    @include margin-left($i);
+                }
+
+                .p#{$i}-#{$name} {
+                    @include margin($i,$i,$i,$i);
+                }
+            }
+        }
+    }
+}

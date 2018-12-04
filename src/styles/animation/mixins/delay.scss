@@ -10,7 +10,6 @@
     }   
 }
 
-
 @mixin child-delay-animation-classes($num, $time, $offset, $name) {
     @for $i from 1 to $num {
         .#{$name}-#{$i} { animation-delay: ($i * $time) + $offset; }

@@ -3,6 +3,12 @@ class App extends Component {
   render() {
     return (
         <div className="pageMargins grid">
+          <div className="row">
+            <div className="col">
+              <p className="p2 mb10 mb0-md mb4-xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex molestias ipsa ad voluptate autem natus eius dignissimos similique delectus rem fugiat, modi temporibus, atque exercitationem possimus explicabo maxime consequuntur iusto?</p>
+              <p className="box mb4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex molestias ipsa ad voluptate autem natus eius dignissimos similique delectus rem fugiat, modi temporibus, atque exercitationem possimus explicabo maxime consequuntur iusto?</p>
+            </div>
+          </div>
           <div className="row justify-content-center">
           
             <div className="col-4 col-lg-2">
